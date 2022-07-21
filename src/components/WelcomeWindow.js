@@ -10,9 +10,8 @@ export default function WelcomeWindow() {
             <div className="startButton"
                 onClick={() => {
                     setWelcomeWindowClass("welcomeWindow hidden");
-                    console.log("foi");
                 }}
-                ><p className="welcomeFont">Iniciar Recall!</p></div>
+                ><p>Iniciar Recall!</p></div>
         </div>
     );
 }

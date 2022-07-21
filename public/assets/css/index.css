@@ -118,17 +118,97 @@ h2 {
 
     background-color: #ffffff;
     border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 }
 
 .flashcardClosed p {
     font-weight: 700;
     margin-left: 20px;
+    font-size: 16px;
 }
 
 .flashcardClosed ion-icon {
     height: 25px;
     width: 25px;
     margin-right: 20px;
+}
+
+.flashcardOppen {
+    min-width: 300px;
+    width: 80vw;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 auto 30px auto;
+    position: relative;
+
+    background-color: #FFFFD4;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+.flashcardOppen>p {
+    margin: 20px 0 20px 20px;
+    font-size: 18px;
+}
+
+.flashcardOppen ion-icon {
+    height: 35px;
+    width: 35px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.zapButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zapButtons>div {
+    width: 85px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0 20px 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.wrong {
+    background-color: #FF3030;
+}
+
+.flashcardClosedWrong>p, .flashcardClosedWrong>ion-icon {
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.almost {
+    background-color: #FF922E;
+}
+
+.flashcardClosedAlmost>p, .fflashcardClosedAlmost>ion-icon {
+    color: #FF922E;
+    text-decoration: line-through;
+}
+
+.zap {
+    background-color: #2FBE34;
+}
+
+.flashcardClosedZap>p, .flashcardClosedZap>ion-icon {
+    color: #2FBE34;
+    text-decoration: line-through;
 }
 
 /* RESULTS BAR -------------------------- */
