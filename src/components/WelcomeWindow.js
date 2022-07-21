@@ -8,10 +8,11 @@ export default function WelcomeWindow() {
             <img src="/assets/images/logo.png" alt="" className="welcomeWindowImage" />
             <h1>ZapRecall</h1>
             <div className="startButton"
-                onClick={() => {setWelcomeWindowClass("welcomeWindow hidden");
-                console.log("foi");
+                onClick={() => {
+                    setWelcomeWindowClass("welcomeWindow hidden");
+                    console.log("foi");
                 }}
-                ><p>Iniciar Recall!</p></div>
+                ><p className="welcomeFont">Iniciar Recall!</p></div>
         </div>
     );
 }

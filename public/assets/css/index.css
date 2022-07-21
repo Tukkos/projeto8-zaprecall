@@ -14,21 +14,42 @@ h1 {
     color: #ffffff;
     text-align: center;
 
-    margin: 15px auto 30px auto;
+    margin-bottom: 50px;
 }
 
+h2 {
+    font-family: 'Righteous';
+    font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+
+    margin-top: 5px;
+}
+
+
+/* WELCOME WINDOW ----------------------- */
+
 .welcomeWindow {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+
+    margin: auto auto auto auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: #FB6B6B;
 }
 
 .welcomeWindowImage {
     width: 140px;
     height: auto;
-    margin: 25vh auto 0 auto;
+    margin-bottom: 30px;
 }
 
 .startButton {
@@ -48,6 +69,93 @@ h1 {
     color: #d70900;
     font-size: 20px;
 }
+
+
+/* HEADER ------------------------------- */
+
+.header {
+    width: 100vw;
+    height: 140px;
+}
+
+.headerImage {
+    width: 55px;
+    height: auto;
+}
+
+.flashcardWindowHead {
+    height: 140px;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0 auto;
+}
+
+.flashcardWindowImage {
+    width: auto;
+    height: 60px;
+    margin-right: 30px;
+}
+
+
+/* FLASHCARDS --------------------------- */
+
+.flashcards {
+    margin-bottom: 170px;
+}
+
+.flashcardClosed {
+    min-width: 300px;
+    width: 80vw;
+    min-height: 65px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 30px auto;
+
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.flashcardClosed p {
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.flashcardClosed ion-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+}
+
+/* RESULTS BAR -------------------------- */
+
+.resultsBar {
+    min-height: 70px;
+    height: auto;
+    width: 100vw;
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.resultsBar p {
+    font-size: 18px;
+    margin: 15px 0 15px 0;
+}
+
+
+/* HIDDEN ------------------------------- */
 
 .hidden {
     display: none;
