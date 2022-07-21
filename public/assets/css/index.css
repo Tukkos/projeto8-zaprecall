@@ -197,7 +197,7 @@ h2 {
     background-color: #FF922E;
 }
 
-.flashcardClosedAlmost>p, .fflashcardClosedAlmost>ion-icon {
+.flashcardClosedAlmost>p, .flashcardClosedAlmost>ion-icon {
     color: #FF922E;
     text-decoration: line-through;
 }

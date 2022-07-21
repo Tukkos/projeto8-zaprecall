@@ -2,6 +2,29 @@ import FlashcardWindowHead from "./FlashcardWindowHead";
 import FlashCards from "./FlashCards/FlashCards";
 import ResultsBar from "./ResultsBar";
 
+const result = [
+    {
+        result: "default",
+        class: "",
+        iconName: "play-outline"
+    },
+    {
+        result: "wrong",
+        class: "flashcardClosedWrong",
+        icon: "close-circle"
+    },
+    {
+        result: "almost",
+        class: "flashcardClosedAlmost",
+        icon: "help-circle"
+    },
+    {
+        result: "zap",
+        class: "flashcardClosedZap",
+        icon: "checkmark-circle"
+    }
+]
+
 const zaps = [
     {
         id: 1,
@@ -43,28 +66,6 @@ const zaps = [
         question: "Usamos estado (state) para __",
         answer:"Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente.",
     },
-]
-const result = [
-    {
-        result: "default",
-        class: "",
-        iconName: "play-outline"
-    },
-    {
-        result: "wrong",
-        class: "flashcardClosedWrong",
-        icon: "close-circle"
-    },
-    {
-        result: "almost",
-        class: "flashcardClosedAlmost",
-        icon: "help-circle"
-    },
-    {
-        result: "zap",
-        class: "flashcardClosedZap",
-        icon: "checkmark-circle"
-    }
 ]
 
 export default function FlashcardWindow() {
