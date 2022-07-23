@@ -211,6 +211,10 @@ h2 {
     text-decoration: line-through;
 }
 
+.space {
+    height: 140px;
+}
+
 /* RESULTS BAR -------------------------- */
 
 .resultsBar {

@@ -1,52 +1,64 @@
-import React from "react";
+import Zaps from "./Zaps/Zaps";
+
+const zaps = [
+    {
+        key: 1,
+        question: "O que é JSX?",
+        answer:"Uma extensão de linguagem do JavaScript.",
+    },
+    {
+        key: 2,
+        question: "O React é __",
+        answer:"Uma biblioteca JavaScript para construção de interfaces.",
+    },
+    {
+        key: 3,
+        question: "Componentes devem iniciar com __ ",
+        answer:"Letra maiúscula.",
+    },
+    {
+        key: 4,
+        question: "Podemos colocar __ dentro do JSX",
+        answer:"Expressões.",
+    },
+    {
+        key: 5,
+        question: "O ReactDOM nos ajuda __",
+        answer:"Interagindo com a DOM para colocar componentes React na mesma.",
+    },
+    {
+        key: 6,
+        question: "Usamos o npm para __ ",
+        answer:"Gerenciar os pacotes necessários e suas dependências.",
+    },
+    {
+        key: 7,
+        question: "Usamos props para __",
+        answer:"Passar diferentes informações para componentes.",
+    },
+    {
+        key: 8,
+        question: "Usamos estado (state) para __",
+        answer:"Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente.",
+    },
+]
 
 export default function FlashCards() {
+    function mix() {
+        return 0.5 - Math.random();
+    }
 
-    const CARD1 = 
-        <div className="flashcardClosed">
-            <p>Pergunta 1</p>
-            <ion-icon name="play-outline" onClick={() => setState(CARD2)} ></ion-icon>
-        </div>;
-
-    const CARD2 = 
-        <div className="flashcardOppen">
-            <p>O que é JSX?</p>
-            <ion-icon name="return-down-forward-outline" onClick={() => setState(CARD3)}></ion-icon>
-        </div>;
-
-    const CARD3 = 
-        <div className="flashcardOppen">
-            <p>Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente.</p>
-            <div className="zapButtons">
-                <div className="wrong" onClick={() => setState(CARD4Wrong)}>Não lembrei!</div>
-                <div className="almost" onClick={() => setState(CARD4Almost)}>Quase não lembrei!</div>  
-                <div className="zap" onClick={() => setState(CARD4Zap)}>Zap!</div> 
-            </div>
-        </div>;
-
-    const CARD4Zap = 
-        <div className="flashcardClosed flashcardClosedZap">
-            <p>Pergunta 1</p>
-            <ion-icon name="checkmark-circle"></ion-icon>
-        </div>;
-
-    const CARD4Almost = 
-        <div className="flashcardClosed flashcardClosedAlmost">
-            <p>Pergunta 1</p>
-            <ion-icon name="help-circle"></ion-icon>
-        </div>;
-
-    const CARD4Wrong = 
-        <div className="flashcardClosed flashcardClosedWrong">
-            <p>Pergunta 1</p>
-            <ion-icon name="close-circle"></ion-icon>
-        </div>;
-
-    const [state, setState] = React.useState(CARD1);
+    zaps.sort(mix);
 
     return (
         <div className="flashcards">
-            {state}
+            {zaps.map((zap, index) => (
+                <Zaps
+                    mkey={index + 1}
+                    question={zap.question}
+                    answer={zap.answer}
+                />
+            ))}
         </div>  
     );
 }
