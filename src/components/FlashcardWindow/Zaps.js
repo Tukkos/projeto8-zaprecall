@@ -1,26 +1,7 @@
 import React from "react";
 
-export default function Zaps({mkey, question, answer}) {
-    // const [counterCard, setCounterCard] = React.useState([[]]);
+export default function Zaps({mkey, question, answer, counterCard, setCounterCard}) {
     const [cardChange, setCardChange] = React.useState("");
-
-    // const wrongAnswer = [{
-    //     result: "wrong",
-    //     class: "flashcardClosedWrong",
-    //     icon: "close-circle"
-    // }];
-
-    // const almostAnswer = [{
-    //     result: "almost",
-    //     class: "flashcardClosedAlmost",
-    //     icon: "help-circle"
-    // }];
-
-    // const zapAnswer = [{
-    //     result: "zap",
-    //     class: "flashcardClosedZap",
-    //     icon: "checkmark-circle"
-    // }]
 
     return (
         <>
@@ -50,12 +31,15 @@ export default function Zaps({mkey, question, answer}) {
                                 <p>{answer}</p>
                                 <div className="zapButtons">
                                     <div className="wrong" onClick={() => {
+                                        setCounterCard([...counterCard, "wrong"]);
                                         setCardChange("card4Wrong");
                                     }}>Não lembrei!</div>
                                     <div className="almost" onClick={() => {
+                                        setCounterCard([...counterCard, "almost"]);
                                         setCardChange("card4Almost");
                                     }}>Quase não lembrei!</div>  
                                     <div className="zap" onClick={() => {
+                                        setCounterCard([...counterCard, "zap"]);
                                         setCardChange("card4Zap");
                                     }}>Zap!</div> 
                                 </div>

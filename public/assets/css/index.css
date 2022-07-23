@@ -5,7 +5,7 @@
 body {
     background-color: #FB6B6B;
     font-family: 'Recursive';
-    font-weight: 400;
+    ;
 }
 
 h1 {
@@ -188,7 +188,7 @@ h2 {
     background-color: #FF3030;
 }
 
-.flashcardClosedWrong>p, .flashcardClosedWrong>ion-icon {
+.flashcardClosedWrong>p, .flashcardClosedWrong ion-icon {
     color: #FF3030;
     text-decoration: line-through;
 }
@@ -197,7 +197,7 @@ h2 {
     background-color: #FF922E;
 }
 
-.flashcardClosedAlmost>p, .flashcardClosedAlmost>ion-icon {
+.flashcardClosedAlmost>p, .flashcardClosedAlmost ion-icon {
     color: #FF922E;
     text-decoration: line-through;
 }
@@ -206,7 +206,7 @@ h2 {
     background-color: #2FBE34;
 }
 
-.flashcardClosedZap>p, .flashcardClosedZap>ion-icon {
+.flashcardClosedZap>p, .flashcardClosedZap ion-icon {
     color: #2FBE34;
     text-decoration: line-through;
 }
@@ -235,7 +235,20 @@ h2 {
 
 .resultsBar p {
     font-size: 18px;
-    margin: 15px 0 15px 0;
+    margin: 10px 0 10px 0;
+}
+
+.resultsIonIcon {
+    display: flex;
+}
+
+.resultsIonIcon ion-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 
